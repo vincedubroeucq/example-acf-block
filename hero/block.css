@@ -1,0 +1,80 @@
+/****************************************************
+ Do not display on anything other than singular page, 
+ and hide Twenty twenty default header.
+****************************************************/
+.block-hero {
+    display: none;
+}
+.singular .entry-header {
+    display: none;
+}
+.singular .post-inner {
+    padding-top: 0;
+}
+.singular .block-hero,
+.block-editor-page .block-hero {
+    display: flex;
+}
+
+/*************
+ Block styles
+**************/
+.block-hero.alignwide,
+.block-hero.alignfull {
+    margin-top: 0;
+}
+h1.hero-title,
+.editor-styles-wrapper .wp-block h1.hero-title {
+    margin-top: 0;
+}
+.block-hero {
+    background-blend-mode: multiply;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    min-height: 400px;
+    padding: 16px;
+    flex-direction: column;
+}
+.wrapper {
+    display: flex;
+    max-width: 1920px;
+    margin: auto auto 0;
+    width: 100%;
+}
+.hero-content {
+    background-color: hsla(344, 95%, 5%, .3);
+    box-shadow: 0 0 15px 15px hsla(344, 95%, 5%, .3);
+    padding: 16px;
+}
+.hero-description {
+    max-width: 768px;
+}
+@media screen and (min-width: 700px) {
+    .block-hero {
+        min-height: 600px;
+    }
+    .hero-content {
+        padding: 32px;
+    }
+}
+@media screen and (min-width: 1220px) {
+    .block-hero  {
+        padding: 64px;
+        min-height: 700px;
+    }
+    .hero-content {
+        padding: 64px;
+    }
+}
+
+/* Adjust inserter preview styles */
+.block-editor-inserter__preview .block-hero {
+    display: block;
+    min-height: 0;
+    padding: 32px; 
+}
+.block-editor-inserter__preview .hero-content {
+    padding: 10px;
+}
